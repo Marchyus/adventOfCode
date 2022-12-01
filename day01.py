@@ -3,7 +3,7 @@ from config import *
 
 inputs_file = os.path.join(inputs_path, 'day01.txt')
 
-# Find max calories carried by single Elf
+
 top_3_calories = [0, 0, 0]
 this_elf_calories = 0
 
@@ -19,5 +19,5 @@ with open(inputs_file, 'r') as inputs:
         else:
             this_elf_calories += int(line)
 
-    print(f'Most callories carried by singe dude: {max(top_3_calories)}')
-    print(f'Callories carried by top 3 elfs: {sum(top_3_calories)}')
+    print(f'Most calories carried by singe dude: {max(top_3_calories)}')
+    print(f'Calories carried by top 3 elfs: {sum(top_3_calories)}')
