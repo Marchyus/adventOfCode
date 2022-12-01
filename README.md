@@ -1,3 +1,3 @@
 <strong> Idea </strong>
 
-Make it sane, but clean and readable.
+Make it clean and super readable.
