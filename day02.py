@@ -1,4 +1,3 @@
-# input - number of Calories each Elf is carrying: https://adventofcode.com/2022/day/2/input
 from config import *
 
 inputs_file = os.path.join(inputs_path, 'day02.txt')
