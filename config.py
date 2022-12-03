@@ -1,4 +1,5 @@
 import os
+import string
 
 # Get current directory
 base_path = os.path.dirname(__file__)
