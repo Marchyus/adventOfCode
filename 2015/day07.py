@@ -1,9 +1,9 @@
-from config import *
-
-inputs_file = os.path.join(inputs_path, 'day07.txt')
+#from config import *
 
 
-with open(inputs_file, 'r') as inputs:
+
+
+with open('inputs\day07.txt', 'r') as inputs:
     full_input = inputs.read().splitlines()
 
 # Part 1
