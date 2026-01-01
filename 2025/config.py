@@ -1,4 +1,4 @@
-import os
+import os, time
 import re
 from pathlib import Path
 
@@ -44,12 +44,21 @@ def get_inputs(file_path):
     # return findings
     return {
         'success': True, 
-        'part_a': part_a,
-        'part_b': part_b,
-        'part_a_test': part_a_test,
-        'part_b_test': part_b_test
+        'input': part_a,
+        'input2': part_b,
+        'test': part_a_test,
+        'test2': part_b_test
         }
         
+
+def timer(func):
+    def time_wrap(*args, **kwargs):
+        start = time.time()
+        func(*args, **kwargs)
+        diff = time.time() - start
+        print(f"{func.__name__}() executed in {diff:4f}s")
+    return time_wrap
+
 
 if (__name__ == '__main__'):
     print(get_inputs(__file__))
