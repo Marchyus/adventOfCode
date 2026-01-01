@@ -1,37 +1,32 @@
-from config import get_inputs # get and/or create input files
+from config import get_inputs, timer
 
-# Get file names
-all_inputs = get_inputs(__file__)
-part_a, part_b, part_a_test, part_b_test = [], [], [], []
-if all_inputs["success"] == True:
-    part_a, part_b = all_inputs["part_a"], all_inputs["part_b"]
-    part_a_test, part_b_test = all_inputs["part_a_test"], all_inputs["part_b_test"]
-else:
-    print(f'Input file(s) are missing: {all_inputs}')
+# Get input data
+inputs = get_inputs(__file__)
 
 
 
 # Part A
+@timer
 def first(banks):
     total_joltage = 0
     for bank in banks:
-        print(bank)
-        print(bank[:len(bank)-1])
+        #print(bank)
+        #print(bank[:len(bank)-1])
         max1 = max(bank[:len(bank)-1])
         max1_index = bank.index(max1)
-        print("max1:", max1)
-        print(max1_index)
+        #print("max1:", max1)
+        #print(max1_index)
         max2 = max(bank[max1_index+1:])
-        print("max2:", max2)
+        #print("max2:", max2)
         total_joltage += int(max1+max2)
         
     print(f"Total joltage: {total_joltage}")
     return total_joltage
 
-#first(part_a)
 
 
 # Part B
+@timer
 def second(banks):
     total_joltage = 0
     for bank in banks:
@@ -60,5 +55,6 @@ def second(banks):
     return total_joltage
 
 
-second(part_a)
-
+# Run tests
+first(inputs["input"])
+second(inputs["input"])
